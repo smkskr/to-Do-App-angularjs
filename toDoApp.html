@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html ng-app="toDoApp">
+<head>
+<title>To Do App</title>
+<!-- stylesheet -->
+<link href="css/toDoApp.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript" src="js/toDoApp.js"></script>
+</head>
+<body ng-controller="toDoCtrl">
+	<h2>My To-do List</h2>
+
+	<form ng-submit="toDoAdd()">
+		<input type="text" ng-model="toDoInput" size="50" placeholder="Add New"> <input type="submit" value="Add New">
+	</form>
+
+	<br>
+
+	<div ng-repeat="x in toDoList track by $index">
+		<input type="checkbox" ng-model="x.done"> <span
+			ng-bind="x.text"></span>
+	</div>
+
+	<p>
+		<button ng-click="remove()">Remove marked</button>
+	</p>
+
+</body>
+</html>
