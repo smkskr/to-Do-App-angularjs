@@ -1,2 +1,50 @@
-body {
+
+
+.app-title{
+	margin:auto;
+	padding:20px;	
+	text-align:center;
 }
+
+.app-container{
+	margin:auto;
+	width:50%;
+	
+	padding:10px;
+}
+
+form{
+	width:50%;
+	margin: auto;
+}
+
+
+.list-container{
+	padding-top:5px;
+}
+
+.list-content{
+	border-bottom: 1px solid #ddd;
+}
+
+input[type="text"] {
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+border-top: 0px;
+border-right: 0px;
+border-left: 0px;
+height: 30px;
+width: 100%;
+max-width: 400px;
+}
+
+input[type="submit"] {
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 25%;
+}
+
+.remove{
+	padding-top:10px;
+	text-align:center;	
+}
+

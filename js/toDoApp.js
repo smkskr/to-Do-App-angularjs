@@ -2,7 +2,6 @@ var toDoApp = angular.module('toDoApp', []);
 
 toDoApp.controller('toDoCtrl', function($scope) {
 	$scope.saved = localStorage.getItem('toDoList');
-	console.log($scope.saved);
 	$scope.toDoList = (localStorage.getItem('toDoList')!=null) ? JSON.parse($scope.saved): [];
 	if(localStorage.getItem('toDoList') == null)localStorage.setItem('toDoList', JSON.stringify($scope.toDoList));
 

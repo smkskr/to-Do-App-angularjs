@@ -8,22 +8,26 @@
 <script type="text/javascript" src="js/toDoApp.js"></script>
 </head>
 <body ng-controller="toDoCtrl">
-	<h2>My To-do List</h2>
+	<h2 class="app-title">My To-do List</h2>
 
-	<form ng-submit="toDoAdd()">
-		<input type="text" ng-model="toDoInput" size="50" placeholder="Add New"> <input type="submit" value="Add New">
-	</form>
+	<div class="app-container">
+		<form ng-submit="toDoAdd()">
+			<input type="text" ng-model="toDoInput" size="50"
+				placeholder="Add New"> <input class="btn" type="submit" value="+">
+		</form>
 
-	<br>
 
-	<div ng-repeat="x in toDoList track by $index">
-		<input type="checkbox" ng-model="x.done"> <span
-			ng-bind="x.text"></span>
+
+		<div class="list-container" ng-repeat="x in toDoList track by $index">
+			<div class="list-content">
+				<input type="checkbox" ng-model="x.done"> <span
+					ng-bind="x.text"></span>
+			</div>
+		</div>
+
+		<div class="remove">
+			<button class="btn" ng-click="remove()">Remove Marked</button>
+		</div>
 	</div>
-
-	<p>
-		<button ng-click="remove()">Remove marked</button>
-	</p>
-
 </body>
 </html>
